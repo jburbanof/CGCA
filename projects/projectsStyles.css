@@ -1,0 +1,162 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+  background-color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #fbbd19;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  color: #2c2f7a;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: row;
+}
+footer div h4 {
+  font-size: 40px;
+  margin: 0;
+}
+footer div ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer div img {
+  width: 40px;
+  color: #2c2f7a;
+}
+
+.whatsappButton {
+  position: fixed;
+  z-index: 4;
+  bottom: 50px;
+  left: 50px;
+}
+
+.navBar {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  transition: top 0.5s ease-in-out;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: #fbbd19;
+  background: linear-gradient(135deg, #fbbd19 40%, #2c2f7a 40%);
+  box-sizing: border-box;
+  padding: 0 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+.navBar .logo {
+  stroke-width: 10;
+}
+.navBar .navButton {
+  background-color: #fbbd19;
+  color: #2c2f7a;
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.navBar .navButton:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.navBar.hide {
+  top: -20%;
+  transition: top 1s ease-in-out;
+}
+
+.content {
+  padding: 50px;
+  height: calc(100vh - 0px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+.content .card {
+  background: #2c2f7a;
+  color: #fbbd19;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  cursor: pointer;
+  width: 150px;
+  height: 100px;
+}
+.content .card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.content .dialog {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+}
+.content .dialog .slidesContainer {
+  position: relative;
+  background: #2c2f7a;
+  color: #fbbd19;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  cursor: pointer;
+  width: 70%;
+  height: 70%;
+}
+.content .dialog .slidesContainer .slide {
+  display: none;
+}
+.content .dialog .slidesContainer .slide.active {
+  display: block;
+}
+.content .dialog .slidesContainer .slideNavigation {
+  position: absolute;
+  text-align: center;
+  margin-top: 10px;
+  bottom: 30px;
+}
+.content .dialog .slidesContainer .slideButton {
+  background-color: #fbbd19;
+  color: #2c2f7a;
+  padding: 5px 10px;
+  margin: 0 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.content .dialog .slidesContainer .slideButton:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+}/*# sourceMappingURL=projectsStyles.css.map */

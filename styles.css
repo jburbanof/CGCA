@@ -1,12 +1,53 @@
-body {
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
   font-family: Roboto;
   background-color: #f5f5f5;
+  overflow-y: auto;
+  position: absolute;
 }
 
 a {
   text-decoration: none;
+}
+
+footer {
+  background-color: #fbbd19;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  color: #2c2f7a;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+footer div h4 {
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+}
+footer div ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer div img {
+  width: 40px;
+  color: #2c2f7a;
+}
+
+.whatsappButton {
+  position: fixed;
+  z-index: 4;
+  bottom: 30px;
+  left: 30px;
 }
 
 .navBar {
@@ -24,31 +65,87 @@ a {
   box-sizing: border-box;
   padding: 0 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  /* ANIMATION */
 }
 .navBar .logo {
   stroke-width: 10;
 }
-.navBar .navButton {
+.navBar .navButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+}
+.navBar .navButtons .navButton {
   background-color: #fbbd19;
   color: #2c2f7a;
-  border: 2px solid #2c2f7a;
   padding: 5px 10px;
   margin: 0 5px;
-  font-size: 15px;
-  /* text-transform: uppercase; */
-  letter-spacing: 1px;
+  font-size: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 10px;
   font-weight: 700;
+  border: 1px solid #2c2f7a;
+}
+.navBar .navButtons .navButton a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.navBar .navButtons .navButton a:hover,
+.navBar .navButtons .navButton a:focus {
+  text-decoration: none;
 }
 .navBar .navButton:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
 }
-
-.navBar.hide {
-  top: -20%;
-  transition: top 1s ease-in-out;
+.navBar .burger {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.navBar .burgerButton {
+  width: 40px;
+  height: 6px;
+  background: #fbbd19;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.navBar .burgerButton::before,
+.navBar .burgerButton::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background: #fbbd19;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.navBar .burgerButton::before {
+  transform: translateY(-14px);
+}
+.navBar .burgerButton::after {
+  transform: translateY(14px);
+}
+.navBar .burger.open .burgerButton {
+  transform: translateX(50px);
+  background: transparent;
+  box-shadow: none;
+}
+.navBar .burger.open .burgerButton::before {
+  transform: rotate(-45deg) translate(-35px, -35px);
+}
+.navBar .burger.open .burgerButton::after {
+  transform: rotate(45deg) translate(-35px, 35px);
 }
 
 .carousel {
@@ -58,11 +155,25 @@ a {
   height: calc(100vh - 108px);
   overflow: hidden;
 }
+.carousel .logoContainer {
+  background-color: rgba(44, 47, 122, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .logoContainer .horizontalLogo {
+  width: 80vw;
+}
 .carousel .carousel-images {
   display: flex;
   width: 300%; /* Assuming there are 3 images */
   height: 100%;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 .carousel .carousel-images .carousel-image {
   flex-shrink: 0;
@@ -97,4 +208,86 @@ a {
 }
 .carousel .carousel-button-next {
   right: 10px;
+}
+
+.sectionsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  padding: 30px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.sectionsContainer h3 {
+  text-align: center;
+  font-size: 30px;
+  color: #2c2f7a;
+}
+.sectionsContainer .programs {
+  min-width: 350px;
+  width: calc(100vw - 500px);
+  height: 100%;
+}
+.sectionsContainer .programs .programsCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sectionsContainer .programs .programsCards .programCard {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #2c2f7a;
+  border-radius: 10px;
+  color: #fbbd19;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+.sectionsContainer .programs .programsCards .programCard img {
+  height: 100px;
+}
+.sectionsContainer .programs .programsCards .programCard h4 {
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 980px) {
+  .navBar .navButtons {
+    position: fixed;
+    width: 100%;
+    left: -100%;
+    top: 100px;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2c2f7a;
+    transition: all 0.3s;
+  }
+  .navBar .navButtons .navButton {
+    margin: 16px 0;
+  }
+  .navBar .navButtons.active {
+    left: 0;
+  }
+  .navBar .burger {
+    display: flex;
+  }
+  .carousel .carousel-button {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .sectionsContainer .programs {
+    width: unset;
+  }
 }/*# sourceMappingURL=styles.css.map */

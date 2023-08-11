@@ -2,11 +2,18 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 		<link rel="stylesheet" href="styles.css" />
 		<title>CGCA</title>
 	</head>
 	<body>
+		<a
+			href="https://wa.me/573014299926?text=Hello%20I%20have%20an%20inquiry%20about%20your%20services."
+			target="_blank"
+			class="whatsappButton"
+		>
+			<img src="../images/icons/whatsapp.svg" alt="" width="70px" />
+		</a>
 		<nav class="navBar">
 			<a href="/">
 				<img
@@ -17,26 +24,38 @@
 				/>
 			</a>
 
-			<div class="navButtons">
-				<a href="/" class="navButton">Inicio</a>
-				<a href="mision.html" class="navButton">Mision</a>
-				<a href="vision.html" class="navButton">Vision</a>
-				<a href="noticias.html" class="navButton">Noticias</a>
+			<ul class="navButtons">
+				<li class="navButton"><a href="/">Inicio</a></li>
+				<li class="navButton"><a href="./about/index.html">¿Quiénes Somos?</a></li>
+				<li class="navButton"><a href="">Admisiones</a></li>
+				<li class="navButton"><a href="">Bienestar</a></li>
+				<li class="navButton"><a href="./projects/index.html">Proyectos</a></li>
+			</ul>
+			<div class="burger">
+				<div class="burgerButton"></div>
 			</div>
 		</nav>
 		<header class="carousel">
+			<div class="logoContainer">
+				<img
+					class="horizontalLogo"
+					src="./images/LOGOS GIMNASIO COLOMBO ANDINO/HORIZONTAL/Logo_HORIZONTAL_-_FONDO_AZUL_-_AMARILLO-removebg-preview.png"
+					alt="Image 1"
+				/>
+			</div>
+
 			<div class="carousel-images">
 				<img
 					class="carousel-image"
 					src="./images/carouselImages/image1.jpg"
 					alt="Image 1"
 				/>
-                <img
+				<img
 					class="carousel-image"
 					src="./images/carouselImages/image2.jpg"
 					alt="Image 1"
 				/>
-                <img
+				<img
 					class="carousel-image"
 					src="./images/carouselImages/image3.jpg"
 					alt="Image 1"
@@ -46,7 +65,84 @@
 			<button class="carousel-button carousel-button-prev">&#8678;</button>
 			<button class="carousel-button carousel-button-next">&#8680;</button>
 		</header>
-		<section style="height: 100vh"></section>
+		<main class="sectionsContainer">
+			<section class="programs">
+				<h3>Programas y Servicios</h3>
+				<div class="programsCards">
+					<div class="programCard">
+						<img src="./images/programs/preescolar.svg" alt="" />
+						<h4>Preescolar</h4>
+					</div>
+					<div class="programCard">
+						<img src="./images/programs/backpack.svg" alt="" />
+						<h4>Primaria</h4>
+					</div>
+					<div class="programCard">
+						<img src="./images/programs/book.svg" alt="" />
+						<h4>Bachillerato</h4>
+					</div>
+					<div class="programCard">
+						<img src="./images/programs/preescolar.svg" alt="" />
+						<h4>Educacion para Poblacion con Discapacidad - PCD</h4>
+					</div>
+					<div class="programCard">
+						<img src="./images/programs/group.svg" alt="" />
+						<h4>Asesoría en tareas y refuerzo escolar</h4>
+					</div>
+				</div>
+			</section>
+			<section class="news">
+				<h3>Noticias</h3>
+				<div
+					class="fb-page"
+					data-href="https://www.facebook.com/gimcolomboandino"
+					data-tabs="timeline"
+					data-width=""
+					data-height=""
+					data-small-header="false"
+					data-adapt-container-width="false"
+					data-hide-cover="false"
+					data-show-facepile="true"
+				>
+					<blockquote
+						cite="https://www.facebook.com/facebook"
+						class="fb-xfbml-parse-ignore"
+					>
+						<a href="https://www.facebook.com/facebook">Facebook</a>
+					</blockquote>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.2332912763359!2d-74.15669369912322!3d4.6059884740520385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9eecff5fcd85%3A0x3154789ebfd4185e!2sCl.%2043b%20Sur%20%2372U-08%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1690505695071!5m2!1ses!2sco"
+				width="300"
+				height="300"
+				style="border: 0"
+				allowfullscreen=""
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+			></iframe>
+			<div>
+				<h4>Contactenos</h4>
+				<ul>
+					<li><b>Telefono:</b> 300 787 6546</li>
+					<li><b>Correo:</b> jburbano64@gmail.com</li>
+					<li>
+						<img src="../images/icons/facebook.svg" alt="" />
+						<img src="../images/icons/instagram.svg" alt="" />
+					</li>
+				</ul>
+			</div>
+		</footer>
 		<script src="scripts.js"></script>
+		<script
+			async
+			defer
+			crossorigin="anonymous"
+			src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v17.0"
+			nonce="hUGVqk4Q"
+		></script>
 	</body>
 </html>

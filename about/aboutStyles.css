@@ -1,0 +1,110 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+  background-color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navBar {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  transition: top 0.5s ease-in-out;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: #fbbd19;
+  background: linear-gradient(135deg, #fbbd19 40%, #2c2f7a 40%);
+  box-sizing: border-box;
+  padding: 0 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+.navBar .logo {
+  stroke-width: 10;
+}
+.navBar .navButton {
+  background-color: #fbbd19;
+  color: #2c2f7a;
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.navBar .navButton:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.navBar.hide {
+  top: -20%;
+  transition: top 1s ease-in-out;
+}
+
+.content {
+  margin-top: 160px;
+  padding: 50px;
+}
+.content .aboutArticle {
+  background: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 50px;
+}
+.content .aboutArticle h2 {
+  color: #2c2f7a;
+  font-size: 40px;
+  margin: 0;
+}
+.content .aboutArticle div {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.content .aboutArticle div img {
+  width: 350px;
+  margin: 0 10px;
+}
+.content .aboutArticle div p {
+  margin: 0;
+  font-size: 25px;
+  text-align: justify;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+footer {
+  background-color: #fbbd19;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  color: #2c2f7a;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+footer div h4 {
+  font-size: 40px;
+}
+footer div ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer div img {
+  width: 40px;
+  color: #2c2f7a;
+}/*# sourceMappingURL=aboutStyles.css.map */

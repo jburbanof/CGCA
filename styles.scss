@@ -1,15 +1,56 @@
 $blue: #2c2f7a;
 $yellow: #fbbd19;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
 body {
-	padding: 0;
-	margin: 0;
+	width: 100%;
 	font-family: Roboto;
 	background-color: #f5f5f5;
+	overflow-y: auto;
+	position: absolute;
 }
 a {
 	text-decoration: none;
 }
+footer {
+	background-color: $yellow;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+	padding: 30px;
+	color: $blue;
+	font-size: 30px;
+	display: flex;
+	justify-content: space-around;
+	align-items: start;
+	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
+	div {
+		h4 {
+			font-size: 40px;
+			margin: 0;
+			text-align: center;
+		}
+		ul {
+			list-style-type: none;
+			padding: 0;
+		}
+		img {
+			width: 40px;
+			color: $blue;
+		}
+	}
+}
+.whatsappButton {
+	position: fixed;
+	z-index: 4;
+	bottom: 30px;
+	left: 30px;
+}
+
 .navBar {
 	z-index: 100;
 	position: fixed;
@@ -28,29 +69,88 @@ a {
 	.logo {
 		stroke-width: 10;
 	}
-	.navButton {
-		background-color: $yellow;
-		color: $blue;
-		border: 2px solid $blue;
-		padding: 5px 10px;
-		margin: 0 5px;
-		font-size: 15px;
-		/* text-transform: uppercase; */
-		letter-spacing: 1px;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		border-radius: 10px;
-		font-weight: 700;
+	.navButtons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		list-style-type: none;
+		.navButton {
+			background-color: $yellow;
+			color: $blue;
+			padding: 5px 10px;
+			margin: 0 5px;
+			font-size: 25px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			border-radius: 10px;
+			font-weight: 700;
+			border: 1px solid $blue;
+			a {
+				text-decoration: none;
+				color: inherit;
+				cursor: pointer;
+			}
+			a:hover,
+			a:focus {
+				text-decoration: none;
+			}
+		}
 	}
 
 	.navButton:hover {
 		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
 	}
+
+	.burger {
+		position: relative;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		width: 80px;
+		height: 80px;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+	}
+	.burgerButton {
+		width: 40px;
+		height: 6px;
+		background: $yellow;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+		transition: all 0.3s ease-in-out;
+	}
+	.burgerButton::before,
+	.burgerButton::after {
+		content: "";
+		position: absolute;
+		width: 40px;
+		height: 6px;
+		background: $yellow;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+		transition: all 0.3s ease-in-out;
+	}
+	.burgerButton::before {
+		transform: translateY(-14px);
+	}
+	.burgerButton::after {
+		transform: translateY(14px);
+	}
+	/* ANIMATION */
+	.burger.open .burgerButton {
+		transform: translateX(50px);
+		background: transparent;
+		box-shadow: none;
+	}
+	.burger.open .burgerButton::before {
+		transform: rotate(-45deg) translate(-35px, -35px);
+	}
+	.burger.open .burgerButton::after {
+		transform: rotate(45deg) translate(-35px, 35px);
+	}
 }
-.navBar.hide {
-	top: -20%;
-	transition: top 1s ease-in-out;
-}
+
 //Carousel
 .carousel {
 	position: relative;
@@ -58,12 +158,27 @@ a {
 	margin-top: 108px;
 	height: calc(100vh - 108px);
 	overflow: hidden;
+	.logoContainer {
+		background-color: rgba(44, 47, 122, 0.5);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.horizontalLogo {
+			width: 80vw;
+		}
+	}
 
 	.carousel-images {
 		display: flex;
 		width: 300%; /* Assuming there are 3 images */
 		height: 100%;
-		transition: transform 0.5s ease-in-out;
+		transition: transform 1s ease-in-out;
+
 		.carousel-image {
 			flex-shrink: 0;
 			width: 33.3333%; /* Assuming there are 3 images */
@@ -99,5 +214,95 @@ a {
 
 	.carousel-button-next {
 		right: 10px;
+	}
+}
+
+.sectionsContainer {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	flex-direction: row;
+	padding: 30px;
+	flex-wrap: wrap;
+	gap: 30px;
+	h3 {
+		text-align: center;
+		font-size: 30px;
+		color: $blue;
+	}
+	.programs {
+		min-width: 350px;
+		width: calc(100vw - 500px);
+		height: 100%;
+		.programsCards {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			.programCard {
+				width: 200px;
+				height: 200px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+				background-color: $blue;
+				border-radius: 10px;
+				color: $yellow;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-direction: column;
+				padding: 20px;
+				box-sizing: border-box;
+				margin: 10px;
+				img {
+					height: 100px;
+				}
+				h4 {
+					font-size: 18px;
+					margin: 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 980px) {
+	.navBar {
+		.navButtons {
+			position: fixed;
+			width: 100%;
+			left: -100%;
+			top: 100px;
+			gap: 0;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			background-color: $blue;
+
+			transition: all 0.3s;
+
+			.navButton {
+				margin: 16px 0;
+			}
+		}
+		.navButtons.active {
+			left: 0;
+		}
+		.burger {
+			display: flex;
+		}
+	}
+	.carousel {
+		.carousel-button {
+			display: none;
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+	.sectionsContainer {
+		.programs {
+			width: unset;
+		}
 	}
 }
