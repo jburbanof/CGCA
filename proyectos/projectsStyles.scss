@@ -1,17 +1,19 @@
 $blue: #2c2f7a;
 $yellow: #fbbd19;
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-
 body {
-	width: 100%;
+	padding: 0;
+	margin: 0;
 	font-family: "Roboto", sans-serif;
 	background-color: #f5f5f5;
-	overflow-y: auto;
-	position: absolute;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 a {
 	text-decoration: none;
@@ -41,7 +43,7 @@ footer {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			flex-direction: column
+			flex-direction: column;
 		}
 		img {
 			width: 40px;
@@ -52,10 +54,9 @@ footer {
 .whatsappButton {
 	position: fixed;
 	z-index: 4;
-	bottom: 30px;
-	left: 30px;
+	bottom: 50px;
+	left: 50px;
 }
-
 .navBar {
 	z-index: 100;
 	position: fixed;
@@ -156,122 +157,188 @@ footer {
 	}
 }
 
-//Carousel
-.carousel {
-	position: relative;
-	width: 100%;
+.content {
+	padding: 50px;
 	margin-top: 108px;
-	height: calc(100vh - 108px);
-	overflow: hidden;
-	.logoContainer {
-		background-color: rgba(44, 47, 122, 0.5);
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: 3;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		.horizontalLogo {
-			width: 80vw;
-		}
-	}
-
-	.carousel-images {
-		display: flex;
-		width: 300%; /* Assuming there are 3 images */
-		height: 100%;
-		transition: transform 1s ease-in-out;
-
-		.carousel-image {
-			flex-shrink: 0;
-			width: 33.3333%; /* Assuming there are 3 images */
-			height: 100%;
-			object-fit: cover;
-		}
-		.carousel-image.active {
-			opacity: 1;
-			display: unset;
-		}
-	}
-	.carousel-button {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		background-color: $blue;
-		color: $yellow;
-		padding: 0 5px;
-		font-size: 40px;
-		letter-spacing: 1px;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		border-radius: 10px;
-		font-weight: 700;
-	}
-	.carousel-button:hover {
-		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
-	}
-
-	.carousel-button-prev {
-		left: 10px;
-	}
-
-	.carousel-button-next {
-		right: 10px;
-	}
-}
-
-.sectionsContainer {
 	display: flex;
-	justify-content: center;
-	align-items: start;
+	justify-content: space-evenly;
+	align-items: center;
 	flex-direction: row;
-	padding: 30px;
 	flex-wrap: wrap;
-	gap: 30px;
-	h3 {
+	gap: 20px;
+	min-height: calc(100vh - 108px);
+	.card {
+		background: $blue;
+		color: $yellow;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		width: 250px;
+		height: 200px;
 		text-align: center;
-		font-size: 30px;
-		color: $blue;
 	}
-	.programs {
-		min-width: 320px;
-		width: calc(100vw - 500px);
+	.card:hover {
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	}
+	.dialog {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
 		height: 100%;
-		.programsCards {
+		background-color: rgba(0, 0, 0, 0.5);
+		display: none;
+		align-items: center;
+		justify-content: center;
+		z-index: 101;
+
+		.slidesContainer {
+			position: relative;
+			background: $blue;
+			color: $yellow;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 			display: flex;
-			justify-content: center;
+			flex-direction: column;
 			align-items: center;
-			flex-direction: row;
-			flex-wrap: wrap;
-			.programCard {
-				width: 200px;
-				height: 200px;
-				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-				background-color: $blue;
-				border-radius: 10px;
-				color: $yellow;
+			justify-content: start;
+			margin-bottom: 50px;
+			cursor: pointer;
+			width: 70%;
+			.slide {
+				display: none;
 				display: flex;
-				justify-content: space-between;
+				justify-content: center;
 				align-items: center;
 				flex-direction: column;
-				padding: 20px;
-				box-sizing: border-box;
-				margin: 10px;
-				img {
-					height: 100px;
-				}
-				h4 {
-					font-size: 18px;
-					margin: 0;
+				h2 {
 					text-align: center;
+					font-size: 40px;
+				}
+				div {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: row;
+					gap: 20px;
+					.slideContent {
+						width: 50%;
+						display: flex;
+						justify-content: left;
+						align-items: left;
+						flex-direction: column;
+						p {
+							width: 100%;
+							font-size: 30px;
+						}
+						ul {
+							width: 100%;
+							font-size: 30px;
+						}
+					}
+					p {
+						width: 50%;
+						font-size: 30px;
+					}
+
+					img {
+						width: 50%;
+					}
+				}
+			}
+			.slide.active {
+				display: block;
+			}
+			.slideNavigation {
+				position: absolute;
+				text-align: center;
+				margin-top: 10px;
+				bottom: 30px;
+			}
+			.slideButton {
+				background-color: $yellow;
+				color: $blue;
+				padding: 5px 10px;
+				margin: 0 5px;
+				letter-spacing: 1px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				border-radius: 10px;
+				font-weight: 700;
+				font-size: 18px;
+			}
+			.slideButton:hover {
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+			}
+		}
+	}
+}
+.mobileContent {
+	display: none;
+	margin-top: 108px;
+	padding: 20px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.card {
+		background: $blue;
+		color: $yellow;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		text-align: center;
+		margin-bottom: 20px;
+		p {
+			text-align:justify;
+			margin: 10px 0;
+			font-size: 20px;
+		}
+		ul {
+			margin: 10px 0;
+			font-size: 20px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.content {
+		.dialog {
+			.slidesContainer {
+				.slide {
+					h2 {
+						font-size: 30px;
+					}
+					div {
+						.slideContent {
+							p {
+								font-size: 20px;
+							}
+							ul {
+								font-size: 20px;
+							}
+						}
+						p {
+							font-size: 20px;
+						}
+					}
 				}
 			}
 		}
 	}
 }
-
 @media only screen and (max-width: 980px) {
 	.navBar {
 		.navButtons {
@@ -298,16 +365,13 @@ footer {
 			display: flex;
 		}
 	}
-	.carousel {
-		.carousel-button {
-			display: none;
-		}
-	}
 }
-@media only screen and (max-width: 767px) {
-	.sectionsContainer {
-		.programs {
-			width: unset;
-		}
+
+@media only screen and (max-width: 768px) {
+	.content {
+		display: none;
+	}
+	.mobileContent {
+		display: flex;
 	}
 }

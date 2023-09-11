@@ -7,7 +7,7 @@
 body {
   width: 100%;
   font-family: "Roboto", sans-serif;
-  background-color: #f5f5f5;
+  background-color: #2c2f7a;
   overflow-y: auto;
   position: absolute;
 }
@@ -153,116 +153,53 @@ footer div img {
   transform: rotate(45deg) translate(-35px, 35px);
 }
 
-.carousel {
-  position: relative;
-  width: 100%;
+main {
   margin-top: 108px;
-  height: calc(100vh - 108px);
-  overflow: hidden;
-}
-.carousel .logoContainer {
-  background-color: rgba(44, 47, 122, 0.5);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
+  padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.8);
 }
-.carousel .logoContainer .horizontalLogo {
-  width: 80vw;
-}
-.carousel .carousel-images {
-  display: flex;
-  width: 300%; /* Assuming there are 3 images */
-  height: 100%;
-  transition: transform 1s ease-in-out;
-}
-.carousel .carousel-images .carousel-image {
-  flex-shrink: 0;
-  width: 33.3333%; /* Assuming there are 3 images */
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.carousel .carousel-images .carousel-image.active {
-  opacity: 1;
-  display: unset;
-}
-.carousel .carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #2c2f7a;
+main h1 {
   color: #fbbd19;
-  padding: 0 5px;
-  font-size: 40px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 10px;
-  font-weight: 700;
-}
-.carousel .carousel-button:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
-}
-.carousel .carousel-button-prev {
-  left: 10px;
-}
-.carousel .carousel-button-next {
-  right: 10px;
 }
 
 .sectionsContainer {
+  width: 100%;
+  padding: 40px;
   display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: row;
-  padding: 30px;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.sectionsContainer h3 {
-  text-align: center;
-  font-size: 30px;
-  color: #2c2f7a;
-}
-.sectionsContainer .programs {
-  min-width: 320px;
-  width: calc(100vw - 500px);
-  height: 100%;
-}
-.sectionsContainer .programs .programsCards {
-  display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 40px;
 }
-.sectionsContainer .programs .programsCards .programCard {
-  width: 200px;
-  height: 200px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  background-color: #2c2f7a;
+.sectionsContainer .inscriptionType {
+  background: white;
+  padding: 20px 40px;
   border-radius: 10px;
-  color: #fbbd19;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
-  padding: 20px;
-  box-sizing: border-box;
-  margin: 10px;
+  align-items: center;
+  justify-content: start;
 }
-.sectionsContainer .programs .programsCards .programCard img {
-  height: 100px;
+.sectionsContainer .inscriptionType .inscriptionTypeTitle {
+  color: #2c2f7a;
+  background-color: #2c2f7a;
+  color: #fbbd19;
+  padding: 5px 20px;
+  border-radius: 30px;
+  margin-bottom: 20px;
 }
-.sectionsContainer .programs .programsCards .programCard h4 {
-  font-size: 18px;
-  margin: 0;
-  text-align: center;
+.sectionsContainer .inscriptionType .list {
+  list-style-type: circle;
+  line-height: 2;
+}
+.sectionsContainer .inscriptionType .list li {
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 980px) {
@@ -295,4 +232,4 @@ footer div img {
   .sectionsContainer .programs {
     width: unset;
   }
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=inscriptionsStyles.css.map */

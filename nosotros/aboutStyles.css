@@ -5,54 +5,21 @@
 }
 
 body {
-  width: 100%;
+  padding: 0;
+  margin: 0;
   font-family: "Roboto", sans-serif;
-  background-color: #f5f5f5;
-  overflow-y: auto;
-  position: absolute;
+  background-color: #2c2f7a;
 }
 
 a {
   text-decoration: none;
 }
 
-footer {
-  background-color: #fbbd19;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-  padding: 30px;
-  color: #2c2f7a;
-  font-size: 30px;
-  display: flex;
-  justify-content: space-around;
-  align-items: start;
-  flex-direction: row;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-footer div h4 {
-  font-size: 40px;
-  margin: 0;
-  text-align: center;
-}
-footer div ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-footer div img {
-  width: 40px;
-  color: #2c2f7a;
-}
-
 .whatsappButton {
   position: fixed;
   z-index: 4;
-  bottom: 30px;
-  left: 30px;
+  bottom: 50px;
+  left: 50px;
 }
 
 .navBar {
@@ -153,116 +120,79 @@ footer div img {
   transform: rotate(45deg) translate(-35px, 35px);
 }
 
-.carousel {
-  position: relative;
-  width: 100%;
-  margin-top: 108px;
-  height: calc(100vh - 108px);
-  overflow: hidden;
+.content {
+  margin-top: 160px;
+  padding: 50px;
 }
-.carousel .logoContainer {
-  background-color: rgba(44, 47, 122, 0.5);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.carousel .logoContainer .horizontalLogo {
-  width: 80vw;
-}
-.carousel .carousel-images {
-  display: flex;
-  width: 300%; /* Assuming there are 3 images */
-  height: 100%;
-  transition: transform 1s ease-in-out;
-}
-.carousel .carousel-images .carousel-image {
-  flex-shrink: 0;
-  width: 33.3333%; /* Assuming there are 3 images */
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.carousel .carousel-images .carousel-image.active {
-  opacity: 1;
-  display: unset;
-}
-.carousel .carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #2c2f7a;
-  color: #fbbd19;
-  padding: 0 5px;
-  font-size: 40px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.content .aboutArticle {
+  background: white;
+  padding: 50px;
   border-radius: 10px;
-  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 50px;
 }
-.carousel .carousel-button:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+.content .aboutArticle h2 {
+  color: #2c2f7a;
+  font-size: 40px;
+  margin: 0;
 }
-.carousel .carousel-button-prev {
-  left: 10px;
-}
-.carousel .carousel-button-next {
-  right: 10px;
-}
-
-.sectionsContainer {
+.content .aboutArticle div {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: row;
-  padding: 30px;
+  margin-top: 50px;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
 }
-.sectionsContainer h3 {
-  text-align: center;
-  font-size: 30px;
+.content .aboutArticle div img {
+  width: 350px;
+  margin: 0 10px;
+}
+.content .aboutArticle div p {
+  min-width: 450px;
+  max-width: 600px;
+  margin: 5px;
+  font-size: 25px;
+  text-align: justify;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+footer {
+  background-color: #fbbd19;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  padding: 30px;
   color: #2c2f7a;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.sectionsContainer .programs {
-  min-width: 320px;
-  width: calc(100vw - 500px);
-  height: 100%;
+footer div h4 {
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
 }
-.sectionsContainer .programs .programsCards {
+footer div ul {
+  list-style-type: none;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.sectionsContainer .programs .programsCards .programCard {
-  width: 200px;
-  height: 200px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  background-color: #2c2f7a;
-  border-radius: 10px;
-  color: #fbbd19;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
-  padding: 20px;
-  box-sizing: border-box;
-  margin: 10px;
 }
-.sectionsContainer .programs .programsCards .programCard img {
-  height: 100px;
-}
-.sectionsContainer .programs .programsCards .programCard h4 {
-  font-size: 18px;
-  margin: 0;
-  text-align: center;
+footer div img {
+  width: 40px;
+  color: #2c2f7a;
 }
 
 @media only screen and (max-width: 980px) {
@@ -287,12 +217,4 @@ footer div img {
   .navBar .burger {
     display: flex;
   }
-  .carousel .carousel-button {
-    display: none;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .sectionsContainer .programs {
-    width: unset;
-  }
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=aboutStyles.css.map */

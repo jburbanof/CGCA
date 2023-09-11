@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="projectsStyles.css" />
+		<title>Cards with Slides</title>
+	</head>
+	<body>
+		<a
+			href="https://wa.me/573232031440?text=Hello%20I%20have%20an%20inquiry%20about%20your%20services."
+			target="_blank"
+			class="whatsappButton"
+		>
+			<img src="../images/icons/whatsapp.svg" alt="" width="70px" />
+		</a>
+		<nav class="navBar">
+			<a href="/">
+				<img
+					src="../images/LOGOS GIMNASIO COLOMBO ANDINO/LOGO VERTICAL/logoSvg.svg"
+					alt=""
+					width="100px"
+					class="logo"
+				/>
+			</a>
+
+			<ul class="navButtons">
+				<li class="navButton"><a href="/">Inicio</a></li>
+				<li class="navButton"><a href="../nosotros/">¿Quiénes Somos?</a></li>
+				<li class="navButton"><a href="../inscripciones/">Inscripciones</a></li>
+				<li class="navButton"><a href="../bienestar/">Bienestar</a></li>
+			</ul>
+			<div class="burger">
+				<div class="burgerButton"></div>
+			</div>
+		</nav>
+		<main class="content">
+			<article class="card" onclick="openDialog('dialog1')">
+				<h2>PROYECTO DE INCLUSIÓN</h2>
+			</article>
+			<article class="card" onclick="openDialog('dialog2')">
+				<h2>PROYECTO DE INVESTIGACIÓN</h2>
+			</article>
+			<article class="card" onclick="openDialog('dialog3')">
+				<h2>PROYECTO DE SOCIOAFECTIVIDAD</h2>
+			</article>
+			<article class="card" onclick="openDialog('dialog4')">
+				<h2>PROYECTO PROFUNDIZACIÓN DE INGLÉS</h2>
+			</article>
+
+			<!-- Dialog 1 -->
+			<div class="dialog" id="dialog1">
+				<div class="slidesContainer">
+					<div class="slide active">
+						<h2>Inclusion</h2>
+						<div>
+							<p>
+								Atendemos población con discapacidad en grupos de educación regular y
+								ciclos pedagógicos con ajustes curriculares acordes las necesidades de
+								cada estudiante.
+							</p>
+							<img src="../images/projects/inclusion.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Dialog 2 -->
+			<div class="dialog" id="dialog2">
+				<div class="slidesContainer">
+					<div class="slide active">
+						<h2>Investigacion</h2>
+						<div>
+							<p>
+								En la media vocacional (10° y 11°) los estudiantes en el área de
+								investigación, formulan, desarrollan y sustentan su proyecto de grado
+								enfocado en los temas de su interés para el desarrollo de su proyecto de
+								vida.
+							</p>
+							<img src="../images/projects/investigacion.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Dialog 3 -->
+			<div class="dialog" id="dialog3">
+				<div class="slidesContainer">
+					<div class="slide active">
+						<h2>Socioafectividad</h2>
+						<div>
+							<p>
+								Desde preescolar hasta grado undécimo, los docentes tutores ( directores
+								de grupo) implementan el proyecto de afectividad respondiendo a las
+								necesidades y expectativas de cada grupo de estudiantes por grado.
+							</p>
+							<img src="../images/projects/socioafectividad.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Dialog 4 -->
+			<div class="dialog" id="dialog4">
+				<div class="slidesContainer">
+					<div class="slide active">
+						<h2>Ingles</h2>
+						<div>
+							<div class="slideContent">
+								<p>
+									Mayor intensidad horaria en el área de inglés para fortalecer las
+									habilidades comunicativas de la segunda lengua:
+								</p>
+								<ul>
+									<li>Listening</li>
+									<li>Speaking</li>
+									<li>Reading</li>
+									<li>Writing</li>
+								</ul>
+							</div>
+
+							<img src="../images/projects/ingles.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<main class="mobileContent">
+			<article class="card" onclick="openDialog('dialog1')">
+				<h2>PROYECTO DE INCLUSIÓN</h2>
+				<p>
+					Atendemos población con discapacidad en grupos de educación regular y
+					ciclos pedagógicos con ajustes curriculares acordes las necesidades de cada
+					estudiante.
+				</p>
+				<img src="../images/projects/inclusion.jpg" alt="" />
+			</article>
+			<article class="card" onclick="openDialog('dialog2')">
+				<h2>PROYECTO DE INVESTIGACIÓN</h2>
+				<p>
+					En la media vocacional (10° y 11°) los estudiantes en el área de
+					investigación, formulan, desarrollan y sustentan su proyecto de grado
+					enfocado en los temas de su interés para el desarrollo de su proyecto de
+					vida.
+				</p>
+				<img src="../images/projects/investigacion.jpg" alt="" />
+			</article>
+			<article class="card" onclick="openDialog('dialog3')">
+				<h2>PROYECTO DE SOCIOAFECTIVIDAD</h2>
+				<p>
+					Desde preescolar hasta grado undécimo, los docentes tutores ( directores de
+					grupo) implementan el proyecto de afectividad respondiendo a las
+					necesidades y expectativas de cada grupo de estudiantes por grado.
+				</p>
+				<img src="../images/projects/socioafectividad.jpg" alt="" />
+			</article>
+			<article class="card" onclick="openDialog('dialog4')">
+				<h2>PROYECTO PROFUNDIZACIÓN DE INGLÉS</h2>
+				<p>
+					Mayor intensidad horaria en el área de inglés para fortalecer las
+					habilidades comunicativas de la segunda lengua:
+				</p>
+				<ul>
+					<li>Listening</li>
+					<li>Speaking</li>
+					<li>Reading</li>
+					<li>Writing</li>
+				</ul>
+
+				<img src="../images/projects/ingles.jpg" alt="" />
+			</article>
+		</main>
+		<footer>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.2332912763359!2d-74.15669369912322!3d4.6059884740520385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9eecff5fcd85%3A0x3154789ebfd4185e!2sCl.%2043b%20Sur%20%2372U-08%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1690505695071!5m2!1ses!2sco"
+				width="300"
+				height="300"
+				style="border: 0"
+				allowfullscreen=""
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+			></iframe>
+			<div>
+				<h4>Contactenos</h4>
+				<ul>
+					<li><b>Telefono:</b>8051252</li>
+					<li><b>Celular:</b>3232031440</li>
+
+					<li><b>Correo:</b>gimcolandy@yahoo.es</li>
+					<li>
+						<a
+							href="https://www.facebook.com/gimcolomboandino?locale=es_LA"
+							target="_blank"
+						>
+							<img src="../images/icons/facebook.svg" alt="" />
+						</a>
+						<a
+							href="https://www.facebook.com/gimcolomboandino?locale=es_LA"
+							target="_blank"
+						>
+							<img src="../images/icons/instagram.svg" alt="" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<script src="./scripts.js"></script>
+		<script src="../scripts.js"></script>
+	</body>
+</html>
