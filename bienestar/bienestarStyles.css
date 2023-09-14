@@ -154,9 +154,28 @@ footer div img {
 }
 
 .sectionsContainer {
-  margin-top: 108px;
+  margin-top: 158px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sectionsContainer h1 {
+  font-size: 40px;
+  color: #2c2f7a;
 }
 
+.imageContainer {
+  margin: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 980px) {
+  .imageContainer {
+    width: 60%;
+  }
+}
 @media only screen and (max-width: 980px) {
   .navBar .navButtons {
     position: fixed;
@@ -181,10 +200,5 @@ footer div img {
   }
   .carousel .carousel-button {
     display: none;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .sectionsContainer .programs {
-    width: unset;
   }
 }/*# sourceMappingURL=bienestarStyles.css.map */

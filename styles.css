@@ -242,17 +242,17 @@ footer div img {
   flex-wrap: wrap;
 }
 .sectionsContainer .programs .programsCards .programCard {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   background-color: #2c2f7a;
   border-radius: 10px;
   color: #fbbd19;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 30px;
   box-sizing: border-box;
   margin: 10px;
 }
@@ -261,7 +261,7 @@ footer div img {
 }
 .sectionsContainer .programs .programsCards .programCard h4 {
   font-size: 18px;
-  margin: 0;
+  margin: 10px 0 0 0;
   text-align: center;
 }
 

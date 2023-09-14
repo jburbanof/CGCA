@@ -182,7 +182,7 @@ footer div img {
   text-align: center;
 }
 .content .card:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
 }
 .content .dialog {
   position: fixed;
@@ -221,6 +221,7 @@ footer div img {
 .content .dialog .slidesContainer .slide h2 {
   text-align: center;
   font-size: 40px;
+  margin-bottom: 20px;
 }
 .content .dialog .slidesContainer .slide div {
   display: flex;
@@ -243,6 +244,7 @@ footer div img {
 .content .dialog .slidesContainer .slide div .slideContent ul {
   width: 100%;
   font-size: 30px;
+  padding-left: 30px;
 }
 .content .dialog .slidesContainer .slide div p {
   width: 50%;
@@ -294,7 +296,6 @@ footer div img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   text-align: center;
   margin-bottom: 20px;
 }
