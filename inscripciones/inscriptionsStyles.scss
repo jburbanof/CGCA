@@ -196,11 +196,21 @@ main {
 		}
 		.list {
 			list-style-type: circle;
-            line-height: 2;
+			line-height: 2;
+			width: 100%;
 			li {
 				font-size: 20px;
 			}
 		}
+		b {
+			text-align: center;
+			color: $blue;
+			margin: 10px;
+		}
+	}
+	.note {
+		color: $yellow;
+		text-align: center;
 	}
 }
 @media only screen and (max-width: 980px) {

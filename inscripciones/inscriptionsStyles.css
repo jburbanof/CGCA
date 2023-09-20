@@ -197,9 +197,19 @@ main h1 {
 .sectionsContainer .inscriptionType .list {
   list-style-type: circle;
   line-height: 2;
+  width: 100%;
 }
 .sectionsContainer .inscriptionType .list li {
   font-size: 20px;
+}
+.sectionsContainer .inscriptionType b {
+  text-align: center;
+  color: #2c2f7a;
+  margin: 10px;
+}
+.sectionsContainer .note {
+  color: #fbbd19;
+  text-align: center;
 }
 
 @media only screen and (max-width: 980px) {

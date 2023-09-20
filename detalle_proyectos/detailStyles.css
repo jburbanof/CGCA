@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  overflow-y: auto;
+  position: absolute;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #fbbd19;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  color: #2c2f7a;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+footer div h4 {
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+}
+footer div ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer div img {
+  width: 40px;
+  color: #2c2f7a;
+}
+
+.whatsappButton {
+  position: fixed;
+  z-index: 4;
+  bottom: 30px;
+  left: 30px;
+}
+
+.navBar {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  transition: top 0.5s ease-in-out;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: #fbbd19;
+  background: linear-gradient(135deg, #fbbd19 40%, #2c2f7a 40%);
+  box-sizing: border-box;
+  padding: 0 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  /* ANIMATION */
+}
+.navBar .logo {
+  stroke-width: 10;
+}
+.navBar .navButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+}
+.navBar .navButtons .navButton {
+  background-color: #fbbd19;
+  color: #2c2f7a;
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 1px solid #2c2f7a;
+}
+.navBar .navButtons .navButton a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.navBar .navButtons .navButton a:hover,
+.navBar .navButtons .navButton a:focus {
+  text-decoration: none;
+}
+.navBar .navButton:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+}
+.navBar .burger {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.navBar .burgerButton {
+  width: 40px;
+  height: 6px;
+  background: #fbbd19;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.navBar .burgerButton::before,
+.navBar .burgerButton::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background: #fbbd19;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.navBar .burgerButton::before {
+  transform: translateY(-14px);
+}
+.navBar .burgerButton::after {
+  transform: translateY(14px);
+}
+.navBar .burger.open .burgerButton {
+  transform: translateX(50px);
+  background: transparent;
+  box-shadow: none;
+}
+.navBar .burger.open .burgerButton::before {
+  transform: rotate(-45deg) translate(-35px, -35px);
+}
+.navBar .burger.open .burgerButton::after {
+  transform: rotate(45deg) translate(-35px, 35px);
+}
+
+.sectionsContainer {
+  margin-top: 158px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sectionsContainer h1 {
+  font-size: 40px;
+  color: #2c2f7a;
+}
+
+.imageContainer {
+  margin: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 980px) {
+  .imageContainer {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .navBar .navButtons {
+    position: fixed;
+    width: 100%;
+    left: -100%;
+    top: 100px;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2c2f7a;
+    transition: all 0.3s;
+  }
+  .navBar .navButtons .navButton {
+    margin: 16px 0;
+  }
+  .navBar .navButtons.active {
+    left: 0;
+  }
+  .navBar .burger {
+    display: flex;
+  }
+  .carousel .carousel-button {
+    display: none;
+  }
+}/*# sourceMappingURL=detailStyles.css.map */

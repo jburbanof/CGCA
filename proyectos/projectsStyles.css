@@ -156,6 +156,7 @@ footer div img {
 }
 
 .content {
+  position: relative;
   padding: 50px;
   margin-top: 108px;
   display: flex;
@@ -165,6 +166,30 @@ footer div img {
   flex-wrap: wrap;
   gap: 20px;
   min-height: calc(100vh - 108px);
+}
+.content .navigateDetail {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: #fbbd19;
+  color: #2c2f7a;
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 1px solid #2c2f7a;
+}
+.content .navigateDetail a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.content .navigateDetail a:hover,
+.content .navigateDetail a:focus {
+  text-decoration: none;
 }
 .content .card {
   background: #2c2f7a;
@@ -285,6 +310,27 @@ footer div img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.mobileContent .navigateDetail {
+  background-color: #fbbd19;
+  color: #2c2f7a;
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 1px solid #2c2f7a;
+}
+.mobileContent .navigateDetail a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.mobileContent .navigateDetail a:hover,
+.mobileContent .navigateDetail a:focus {
+  text-decoration: none;
 }
 .mobileContent .card {
   background: #2c2f7a;
